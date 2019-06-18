@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!-- <link rel="stylesheet" href="stylesheets/z_style.css" /> -->
+		<title>Document</title>
+		<script type="text/javascript" src="jquery.js"></script>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{list-style: none;}
+		#z_content{
+			height: auto;
+		}
+		#z_header_login,#z_header_user{
+			height: 120px;
+			border: 3px solid #000;
+			background: url(../images/logo.png) no-repeat;
+			background-size: 20%;
+			background-position: 30px 28px;
+			background-color: #ccc;
+		}
+		#z_header_login>div{
+			height: 120px;
+		}
+		#z_login_btn{
+			width: 120px;
+			height: 60px;
+			font-weight: bold;
+			border: none;
+			margin-top: 28px;
+			margin-right: 80px;
+			float: right;
+		}
+		#z_header_user{
+			display: none;
+		}
+		#z_header_user>div{
+			height: 120px;
+		}
+		#z_user_head{
+			height: 120px;
+			position: relative;
+		}
+		#z_user_head>div{
+			float: right;
+			margin-top: 16px;
+			margin-right: 100px;
+			text-align: center;
+		}
+		#z_user_imgs{
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			background-color: #000;
+		}
+		#z_user_name{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		#z_user_personage{
+			width: 140px;
+			height: auto;
+			transition: .75s;
+			opacity: 0;
+			position: absolute;
+			right: 74px;
+			top: 70px;
+		}
+		#z_user_personage.active{
+			opacity: 1;
+		}
+		#z_user_personage>li{
+			list-style: none;
+			height: 30px;
+			line-height: 30px;
+			background-color: cyan;
+			border: 2px solid #000;
+			text-align: center;
+		}
+		#z_user_personage>li>a{
+			display: block;
+			height: 30px;
+			text-decoration: none;
+			color: red;
+		}
+		#z_main{
+			min-height: 400px;
+		}
+		#z_footer{
+			padding-top: 50px;
+			height: 250px;
+			background-color: #000;
+			text-align: center;
+			font-size: 12px;
+		}
+		#z_footer>p{
+			width: 80%;
+			margin: 0 auto;
+			height: 50px;
+			color: #fff;
+		}
+		
+		.content{
+			width: 70%;
+			min-height: 500px;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		.content_hd{
+			height: 60px;
+			line-height: 60px;
+			margin-bottom: 30px;
+		}
+		.return{
+			float: left;
+		}
+
+		.book_tit{
+			width: 90%;
+			font-size: 20px;
+			text-align: center;
+			float: left;
+		}
+
+		.fixed{
+			position: absolute;
+			right: -130px;
+			top: 30px;
+		}
+
+		.section_nav_list{
+			width: 120px;
+			line-height: 28px;
+			display: none;
+			position: absolute;
+			left: -10px;
+		}
+
+		.content_bd{
+			font-size: 16px;
+			line-height: 32px;
+		}
+
+	</style>
+
+	<body>
+		<div class="container-fluid" id="z_content">
+			<div class="row" id="z_header_login">
+				<div class="col-md-12" id="z_login">
+					<button id="z_login_btn">登录 / 注册</button>
+				</div>
+			</div>
+			<div class="row" id="z_header_user">
+				<div class="col-md-6" id="z_user">
+					
+				</div>
+				<div class="col-md-6" id="z_user_head">
+						<div>
+							<span id="z_user_imgs"></span><br>
+							<span id="z_user_name">123</span>
+						</div>
+						<ul id="z_user_personage">
+							<li><a href="">书架</a></li>
+							<li><a href="">个人中心</a></li>
+							<li><a href="">退出登录</a></li>
+						</ul>
+				</div>
+			</div>
+			<div class="content">
+				<!-- 内容头 -->
+				<div class="content_hd clearfix">
+					<a href="#" class="return">返回</a>
+					<h3 class="book_tit">第一章xxxxx</h3>
+				</div>
+				<!-- 内容头结束 -->
+				<!-- 小说内容阅读区 -->
+				<div class="content_bd">
+					<p>分解表是刚好把上课就刚好是开放和斯蒂芬会计核算的看法和上课就分开就发货速度快接发货时看见的回复是可敬的粉红色的粉红色快递费哈萨克是的减肥好可怜的设计费海口市的减肥好看是京东方海口市将对方海口市将对方是看见的风景解放后看见说得好</p>
+				</div>
+				<!-- 小说内容阅读区 结束 -->
+
+				<!-- 右侧章节列表 -->
+				<div class="fixed">
+					<a href="#" class="section_nav">章节列表</a>
+					<ul class="section_nav_list">
+						<li>第一章xxxxx</li>
+						<li>第一章xxxxx</li>
+						<li>第一章xxxxx</li>
+					</ul>
+				</div>
+				<!-- 右侧章节列表 结束 -->
+			</div>
+			<div class="row" id="z_footer">
+				<p>阅文集团旗下网站：起点中文网   起点女生网   创世中文网   云起书院   红袖添香小说阅读网</p>
+				<p> 关于起点 联系我们 加入我们 帮助中心 提交建议 举报中心 </p>
+				<p>Copyright © 2002-2019 www.qidian.com All Rights Reserved版权所有 上海玄霆娱乐信息科技有限公司</p>
+				<p>联系方式 总机 021-61870500 地址：中国（上海）精神病院试验区碧波路690号6号楼101、201室</p>
+			</div>
+		</div>
+
+	</body>
+	<script>
+		$('#z_user_head>div').on('click',function(){
+			$('#z_user_personage').toggleClass('active')
+		})
+
+		$(".section_nav").on('click',function(){
+			$('.section_nav_list').css('display','block')
+		})
+		
+		$(".section_nav_list").on('mouseout',function(){
+			$(this).css('display','none')
+		})
+	</script>
+</html>
