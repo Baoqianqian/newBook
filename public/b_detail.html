@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页面</title>
+
+</head>
+<link rel="stylesheet" href="stylesheets/b_detail.css">
+<script src="jquery.js"></script>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+
+<body>
+    <div style="overflow:hidden;">
+        <!-- 头部 -->
+        <div class="b_header">
+            <div class="container" id="z_content">
+                <div class="row" id="z_header_login">
+                    <div class="col-md-4 z_logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="col-md-4 col-md-offset-4" id="z_login">
+                        <button id="z_login_btn">登录 / 注册</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 登录注册之后的头像和昵称 -->
+            <div style="display:none;" class="row" id="z_header_user">
+                <div class="col-md-6" id="z_user">
+                    <img src="images/logo.png" alt="" height="100px">
+                </div>
+                <div class="col-md-6" id="z_user_head">
+                    <div>
+                        <span id="z_user_imgs"></span><br>
+                        <span id="z_user_name">123</span>
+                    </div>
+                    <ul id="z_user_personage">
+                        <li>
+                            <a href="">书架</a>
+                        </li>
+                        <li>
+                            <a href="">个人中心</a>
+                        </li>
+                        <li>
+                            <a href="">退出登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 详情 -->
+        <div class="b_detail_box">
+            <div class="b_detail">
+                <!--  左边的盒子，小说的封面  -->
+                <div class="b_detail_l">
+                    <img src="images/1.jpg" alt="">
+                </div>
+                <!-- 右边的详情 -->
+                <div class="b_detail_r">
+                    小说名：&nbsp;《<span id="b_fiction_name">hei</span>》<br />
+                    作者：&nbsp;&nbsp;&nbsp;《<span id="b_fiction_author">123</span>》<br />
+                    简介：&nbsp;&nbsp;&nbsp;<span id="b_fiction_brief"
+                        style="word-break:break-word;">hellohellohellohellohellohellohellohello</span>
+                </div>
+                <!-- 查看更多 -->
+                <div id="b_select_more">查看更多</div>
+                <!-- 收藏 -->
+                <div id="b_collect">收藏</div>
+            </div>
+        </div>
+        <!-- 章节 -->
+        <div class="b_chapter">
+            <!-- 章节的每一项 -->
+            <div class="b_chapter_item">
+                <i style="font-size:30px;font-style: normal;">第<i id="b_chapters">一</i>章
+                </i>
+                <span id="chapter_content">叫嚷着命运不公的人，其实还未真正触及命运。被命运折磨得死去活来的人，已经不愿谈及命运。
+                </span>
+            </div>
+
+        </div>
+
+
+        <!-- 评论的盒子 -->
+        <div class="footer_comment">
+            <input type="text" id='content'>
+            <span class="comment_span" id='contentSpan'>评论</span>
+        </div>
+        <!-- 评论的盒子 -->
+        <div class="comment_list">
+            <!--盛放每一条评论-->
+            <ul id="comment_list_box">
+                <li>
+                    <!--评论的用户头像-->
+                    <div class="header_img">
+                        <img src="images/1.jpg" />
+                        <!--用户的昵称-->
+                        <span class="user_names">小可爱</span>
+                    </div>
+                    <!--用户评论的内容-->
+                    <div class="user_comment_content">
+                        在这个世上不要过分依赖任何人，即使是你的影子也会在黑夜中离开你。努力和上进，不是为了做给别人看，是为了不辜负自己，不辜负此生。在这个世上不要过分依赖任何人，即使是你的影子也会在黑夜中离开你。努力和上进，不是为了做给别人看，是为了不辜负自己，不辜负此生。在这个世上不要过分依赖任何人，即使是你的影子也会在黑夜中离开你。努力和上进，不是为了做给别人看，是为了不辜负自己，不辜负此生。在这个世上不要过分依赖任何人，即使是你的影子也会在黑夜中离开你。努力和上进，不是为了做给别人看，是为了不辜负自己，不辜负此生。在这个世上不要过分依赖任何人，即使是你的影子也会在黑夜中离开你。努力和上进，不是为了做给别人看，是为了不辜负自己，不辜负此生。在这个世上不要过分依赖任何人，即使是你的影子也会在黑夜中离开你。努力和上进，不是为了做给别人看，是为了不辜负自己，不辜负此生。在这个世上不要过分依赖任何人，即使是你的影子也会在黑夜中离开你。努力和上进，不是为了做给别人看，是为了不辜负自己，不辜负此生。在这个世上不要过分依赖任何人，即使是你的影子也会在黑夜中离开你。努力和上进，不是为了做给别人看，是为了不辜负自己，不辜负此生。在这个世上不要过分依赖任何人，即使是你的影子也会在黑夜中离开你。努力和上进，不是为了做给别人看，是为了不辜负自己，不辜负此生。
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 底部 -->
+        <div class="row" id="z_footer">
+            <p>阅文集团旗下网站：起点中文网 起点女生网 创世中文网 云起书院 红袖添香小说阅读网</p>
+            <p> 关于起点 联系我们 加入我们 帮助中心 提交建议 举报中心 </p>
+            <p>Copyright 2002-2019 www.qidian.com All Rights Reserved版权所有 上海玄霆娱乐信息科技有限公司</p>
+            <p>联系方式 总机 021-61870500 地址：中国（上海）精神病院试验区碧波路690号6号楼101、201室</p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+</body>
+<script>
+    $('#z_user_head>div').on('click', function () {
+        $('#z_user_personage').toggleClass('active')
+    })
+</script>
+
+</html>
