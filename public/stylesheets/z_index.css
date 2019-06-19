@@ -27,7 +27,7 @@
 	float: right;
 }
 #z_header_user{
-	/* display: none; */
+	display: none;
 }
 #z_header_user>div{
 	height: 120px;
