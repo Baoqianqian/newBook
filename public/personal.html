@@ -37,7 +37,7 @@
         #z_header_login{
             height: 120px;
             border: 3px solid #000;
-            background: url(../images/logo.png) no-repeat;
+            background: url(images/logo.png) no-repeat;
             background-size: 20%;
             background-position: 30px 28px;
             background-color: #ccc;
@@ -171,7 +171,7 @@
                     <!-- 小说名称结束-->
 
                     <!-- 发布和删除按钮 -->
-                    <button id="issue_btn">发布</button>
+                    <a href="l_section.html"><button id="issue_btn">发布</button></a>
                     <button id="delete_btn">删除</button>
                     <!-- 按钮结束 -->
                 </div>
@@ -204,9 +204,16 @@
                                 <input type="text" class="form-control" id="book_name" placeholder="请输入小说名称">
                             </div>
                             <!-- 创建小说名称结束 -->
+
+                            <!-- 创建小说简介 -->
+                            <div class="form-group">
+                                <label for="book_intro">小说简介</label>
+                                <input type="text" class="form-control" id="book_intro" placeholder="请输入小说名称">
+                            </div>
+                            <!-- 创建小说名称结束 -->
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">创建</button>
+                            <button id="create_btn" type="button" class="btn btn-default" data-dismiss="modal">创建</button>
                         </div>
                     </div>
                 </div>

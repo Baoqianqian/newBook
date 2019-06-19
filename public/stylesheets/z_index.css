@@ -1,0 +1,146 @@
+*{
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+#z_content{
+	height: auto;
+}
+#z_header_login,#z_header_user{
+	height: 120px;
+	border: 3px solid #000;
+	background: url(../images/logo.png) no-repeat;
+	background-size: 20%;
+	background-position: 30px 20px;
+	background-color: #ccc;
+}
+#z_header_login>div{
+	height: 120px;
+}
+#z_login_btn{
+	width: 120px;
+	height: 60px;
+	font-weight: bold;
+	border: none;
+	margin-top: 28px;
+	margin-right: 80px;
+	float: right;
+}
+#z_header_user{
+	/* display: none; */
+}
+#z_header_user>div{
+	height: 120px;
+}
+#z_user_head{
+	height: 120px;
+	position: relative;
+}
+#z_user_head>div{
+	float: right;
+	margin-top: 16px;
+	margin-right: 100px;
+	text-align: center;
+}
+#z_user_imgs{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #000;
+}
+#z_user_name{
+	font-size: 20px;
+	font-weight: bold;
+}
+#z_user_personage{
+	width: 140px;
+	height: auto;
+	transition: .75s;
+	opacity: 0;
+	position: absolute;
+	right: 74px;
+	top: 70px;
+}
+#z_user_personage.active{
+	opacity: 1;
+}
+#z_user_personage>li{
+	list-style: none;
+	height: 30px;
+	line-height: 30px;
+	background-color: cyan;
+	border: 2px solid #000;
+	text-align: center;
+}
+#z_user_personage>li>a{
+	display: block;
+	height: 30px;
+	text-decoration: none;
+	color: red;
+}
+#z_main{
+	min-height: 800px;
+}
+#z_footer{
+	padding-top: 50px;
+	height: 250px;
+	background-color: #000;
+	text-align: center;
+	font-size: 12px;
+}
+#z_footer>p{
+	width: 80%;
+	margin: 0 auto;
+	height: 50px;
+	color: #fff;
+}
+#z_main_search{
+	height: 300px;
+	padding-top: 30px;
+}
+#z_search_ipt{
+	width: 60%;
+	height: 80px;
+	margin-left: 100px;
+	font-size: 24px;
+	text-indent: 1em;
+}
+#z_search_btn{
+	width: 200px;
+	height: 80px;
+	margin-left: 100px;
+	border: none;
+}
+#z_history{
+	height: 190px;
+	padding-left: 100px;
+	overflow: hidden;
+}
+#z_history>div>span{
+	display: inline-block;
+	padding: 0 20px;
+	margin: 6px 20px;
+	border: 1px solid #000;
+	border-radius: 8%;
+}
+#z_main_book{
+	min-height: 500px;
+}
+#z_main_book .z_book_list{
+	width: 14%;
+	height: auto;
+	border: 1px solid #000;
+	float: left;
+	margin-left: 100px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#z_main_book .z_book_list img{
+	width: 100%;
+	height: 80%;
+	margin-bottom: 10px;
+}
+#z_main_book .z_book_list p{
+	text-align: center;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="stylesheets/z_index.css" />
+	<title>Document</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container-fluid" id="z_content">
+		<div class="row" id="z_header_login">
+			<div class="col-md-12" id="z_login">
+				<button id="z_login_btn">登录 / 注册</button>
+			</div>
+		</div>
+		<div class="row" id="z_header_user">
+			<div class="col-md-6" id="z_user">
+
+			</div>
+			<div class="col-md-6" id="z_user_head">
+				<div>
+					<span id="z_user_imgs"></span><br>
+					<span id="z_user_name">123</span>
+				</div>
+				<ul id="z_user_personage">
+					<li>
+						<a href="c_bookshelf.html">书架</a>
+					</li>
+					<li>
+						<a href="personal.html">个人中心</a>
+					</li>
+					<li>
+						<a href="index.html">退出登录</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row" id="z_main">
+			<div class="col-md-12" id="z_main_search">
+				<input type="text" id="z_search_ipt" />
+				<button id="z_search_btn">搜索</button>
+				<div id="z_history">
+					<div style="font-size: 24px;font-weight: 200;">历史搜索 : </div>
+					<div id="z_history_spans">
+						<!--<span>1231231546</span>
+							<span>456</span>
+							<span>789</span>
+							<span>123</span>
+							<span>123</span>
+							<span>123</span>
+							<span>123</span>
+							<span>123</span>
+							<span>123</span>
+							<span>123</span>
+							<span>123</span>
+							<span>456</span>
+							<span>789</span>
+							<span>123</span>
+							<span>123</span>
+							<span>123</span>
+							<span>123</span>-->
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12" id="z_main_book">
+				<!--<div class="z_book_list">
+						<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3350596269,1000336418&fm=26&gp=0.jpg" alt="" />
+						<p><span>123</span></p>
+						<p><span>456</span></p>
+					</div>
+					<div class="z_book_list">
+						<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3350596269,1000336418&fm=26&gp=0.jpg" alt="" />
+						<p><span>123</span></p>
+						<p><span>456</span></p>
+					</div>
+					<div class="z_book_list">
+						<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3350596269,1000336418&fm=26&gp=0.jpg" alt="" />
+						<p><span>123</span></p>
+						<p><span>456</span></p>
+					</div>
+					<div class="z_book_list">
+						<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3350596269,1000336418&fm=26&gp=0.jpg" alt="" />
+						<p><span>123</span></p>
+						<p><span>456</span></p>
+					</div>
+					<div class="z_book_list">
+						<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3350596269,1000336418&fm=26&gp=0.jpg" alt="" />
+						<p><span>123</span></p>
+						<p><span>456</span></p>
+					</div>
+					<div class="z_book_list">
+						<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3350596269,1000336418&fm=26&gp=0.jpg" alt="" />
+						<p><span>123</span></p>
+						<p><span>456</span></p>
+					</div>-->
+			</div>
+		</div>
+		<div class="row" id="z_footer">
+			<p>阅文集团旗下网站：起点中文网 起点女生网 创世中文网 云起书院 红袖添香小说阅读网</p>
+			<p> 关于起点 联系我们 加入我们 帮助中心 提交建议 举报中心 </p>
+			<p>Copyright © 2002-2019 www.qidian.com All Rights Reserved版权所有 上海玄霆娱乐信息科技有限公司</p>
+			<p>联系方式 总机 021-61870500 地址：中国（上海）精神病院试验区碧波路690号6号楼101、201室</p>
+		</div>
+	</div>
+
+</body>
+<script src="jquery.js"></script>
+<script>
+	var href = 'http://localhost:8000'
+	$('#z_user_head>div').on('click', function () {
+		$('#z_user_personage').toggleClass('active')
+	})
+	$('#z_login_btn').on('click', function () {
+		location.href = href + '/z_register.html';
+	})
+</script>
+
+</html>

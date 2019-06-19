@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link rel="stylesheet" href="stylesheets/z_register.css" />
+		<script src="jquery.js"></script>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+		<div class="container-fluid" id="z_register">
+			<div class="row" id="z_header_login">
+				<div class="col-md-12" id="z_login">
+					<button id="z_login_btn">登录 / 注册</button>
+				</div>
+			</div>
+			<div class="row" id="z_login_register">
+				<div>
+					<div class="top-banner"><img src="//bossaudioandcomic-1252317822.file.myqcloud.com/activity/document/0874df07ada5d50b538c08dbfae1644e.jpg"></div>
+					<div class="title-line"><span class="tit" style="font-size: 38px;">?_?</span></div>
+					<div class="login-box clearfix">
+						<div class="login-left">
+							<div class="qrcode-login">
+								<div class="qrcode-con">
+									<div class="qrcode-box">
+										<div class="qrcode-tips"></div>
+										<div class="qrcode-img" title="https://passport.bilibili.com/qrcode/h5/login?oauthKey=63c88af2854cc91325b0d18360e1e315"><canvas width="140" height="140" style="display: none;"></canvas><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAANFUlEQVR4Xu2d3VbrSgyD4f0fmrNKWnbS2v4kTwMHam6TzI8sy/KkLe9vb28fb0/4+/j4N8z7+3s54u3e/X3756OHb/dm80TPR+Ora7usIbpXnWe/B9pntiaa6zaHit0Twvx2iewQZockEZ+CuHp9H1Qa60cJQyytsv5yzQG6UgtHQbIsjtZK4Feq5yjAM9fUUQR1n87Y+/1/KcwQZhNap4wRZk75uwWQnqFAD2GuCJ0dnFGYnIqoMMTyjmmNpDoqP1SSaG2ZB1BNs2p092qUkZnmjDyIapAJJzLdhGM2fliS1MFocxlnVzwMrW0I89jDOGWWSHwKYSJCkBmMVIs6BlW1nHHIIzhJQmpFOFVrydZBqkY4D2HuUCcvNITZEPjWkkSZU2XeagvrtPdEjuj6KMz14I6AjmTdkUUCn6RQNdoUUMcDEaHObmFp/AgzwvlXlqTqzIHcv0MIFXAiRnadxu+UP2d/Q5iido7CbPQgI/0jCqNmHJUkpzshd/+skpV1a5UanO2rCCdqi0nJSLUo3vvnf+TVQJUF5KVWS9YQxn/XHBKGWEbXV09tqeSQAp35PClpl8Qre+quieJI10/9eEMHyC4QQ5ijxyGlJmJk14cwV2Qqwv0lEneJ8tXZfpBjWpjBMYvk/km+1WWS6lGXERnUrqmkPVd7ovOks8L6PoTZwrLSJQ1h1HSF+0ZhaoD+nMJQ5tD1Du+6JFNNb2dNzjMds+k80znaz44Son3R+GVJIkLQdQfoL1OVfONAPYYng9pZk/OME/zbuM4zFNBozKcS5vatATJJHXKQWjiSTCavypbLtY5pVjFR77v3Sur+6T7nJDjCwTH68knvEOYR1g74pCakpKRKaml2SH5QqFGYvOCooKr3/QmFubXVz1QQqqORX6HMcGSz8hxZcDtqQftUSwmtab8fIid5QbV0Z3N+md4hzPb1XgoIkYAMZlSShjBX1BzwR2Fyj/S/VJgoMzoGLetInMxTS1YEpNOZPctgOnujbo8UiJ7vlJyqhD/4rujVgNqCkpTSdcocaheHMBTq7TolPo1yeD769QbKvE75INNKY65mFs0fGdiOEabg0HVSiI6ppcRS4/1ZPYYwxxBRSSDiESHo+hCm0DsqOR1wqcx1/EbHvO+9XLYmVTVJAaiknK4wkTzTopzg01jV9U77n42ntshdI322F1RxIrwpIQ5JVv0ClTXQ7qUh+RHagAqEsz4qJVWSDGH+oRce3K0E9JnPOiVJlW3q3MjDkCqRAqpliMpYhk2UrE5M6PkhzBXNqnwQcSl45JsooA6JKeDqXBmxhzBDmAOHiHDhB6g6Zo2kOsoyx4PQmmgsWh+NrzYCNI+DgzoWlUFSOAe7IYygMJmfWDHSl2fpYHAIUwSHaispgJMlkVrQ+KMwGwLyJ+7UbFKyUc0cZ05q5YkQapcVrYk6r27HUxFbwVnFj5LtUNLUT9ypkysbGcJcs/V6dtXtwlTVW/Uwh+ejT9xReXAY6RLNyVbKdjKDznU1ODSmi8flfqetVtdJJMo40GqrhzB5Sg1hAmyGMC9MGNXDOEfaZCArg0rzdOs9kZxa3KpMZ6qijkmq5Hg+upfwJTsid0nOREOY3NSShyHsyKMMYe4QHoXZAHGaA8KMVCVsq6N2OFMVVd6dhTgdT3WvUx462bgKPmG3ihlVAnpXROsrP6I5hHn8V4QvT5jqm4+UrZEqpf07fMBKrc1ZwNST3mzNKwZVzerL3M69t7XSM6TOdObiJEH5zcchzGMoIkwooE5AVNNLpessjzOEuSI/CnPs7NJKoX7NhBjttIuV2STf1L3eKXmre1ZLhXMOQwqEphXeX9H48veSVsEjWVbd+xBG+49r5CXJC2a+ZwhjliRKHMfPRKaWMrxzPQp+mzDV2+qzjFNVHshod9dEgaaSqq5ZLUP7jskJHu3jDMIeCDeEyUNAB3tq20sk/5WEIeauyhplMHkYWh9JNWV+hxyra1b3RKY48xunqGLnl8CjFtTZVFW7SVIzkIcwGzId4lMyhSWJ2D4K8xiQl1YYUohO5ndqM81D7fme2B3VocRRzzloHY7pVVUjUxjaE611P7/8o4gUSJI1ImTHQNKahjAOVbZ7CbMhjInpKMwVAeelmgqaeh9JoiLfpHDR9Y7qOSWx6lKyzoYyPBrTKVmk5JEvO+xZ/XiDEtT7xQxhcpn/9YShDIwIc8apLL0rogpCzzvXqQtaTQg6nugoFCmQuqcMJ/nf3wxhHqk6hLnDpJONmd/IJPg+I2jOUZhHBMjDdPwpKgy1qM/0MJEUkxkjea7GJLJm7SStqSPvHdNM6r5q+K3YnvHdagreEGYLkZOkqhJTYqlJkCm5/HmYzuaofHQyw+kuFGXprLF6htriSGFIdcgrnb3Pw/rUj2gOYTRqDWGuOA1hhjCfZbTjYaI6SU49gptISFJNZs0Zv6JDd5zOOYvT0VRxIOzoxfBTu6QhzJFemccYwtylocPiUZi8M+pm+48oTGV66eUcHbKRlNP5Qqc7oGfodQZ1blR6ac/UJVHHQ2c/5LQcfMIkH8Lkmd8pvX+eMNW/8HPYSpkXZY7Tgt6ed1RttWTS/lVykKpR1pPq0DoJZ1L6w/xDGII7vz6EMc9cuhmsvhpYzYzu+lQKvTRh1M1/Ht7sfuulMol0nxoY5z7qOLKxqrV2x+x0hupeqZXPxlGTMB1fPbijbHXqoApK575ucIcwR7SHMB+Pv3qgmskuCV9GYRzX3lGB6gR0NTirHYnT7UWdG0m+cw5TEY5KkhND53WE/DWTDjHILxB4dHBIGUzj0/O36wQ+rXOVxJES/hhhol8CV9+BOMaKghOdYHYCnpUZdfyOFyNCUeJEc3YTtOpA9w1Lx5N+Pj+E2UJTlSLq9oYw4v/xGYXZEHgpwnROejsAUZaSBKtmctUvkB+hdaqlNysP1Lmp2Dt4U+nfj1X+k9BVBaHNO+APYTw1G8IE5yjUDlLmOGrgkPv+3q7qdVr829ynE6azuK58k5OPNh11OVEQyf3TOU9nT0QIIhu1yN/ZRVXYf5bRzo8i0qAE0BDmiNCfIYzD7E556I5fEZLAJ4WJfJfzDCULjd8pk93yQ3Pdrh/233n5SBOtHJJlgKugDGFqylKXRdZE/pqJM9EQRtOZldLc7UCdOJYKQ1ukDHfMZjUXzdMtY2Saq7bdAVlt/5WAq2siO0CxjTDN4lD+PoyyqZCFwQesCPTISNNGaUwHSDU4ajnOsCNCUULQez5KDBXTIcz1HCcDYgizUYkIt/TykTLcUaiI+ZSNZ88fqSftiUqzmuGX+9QXoqs4kRIf9rTytvrsgK0CQcGl4A1hjqrzSWL1VzRXg6eeoFLJUMe5z9DV9avkovVR20rzkIchT0klBzvcIcxjFlHQqutDmCs6qxlKQFKXRMw/o3vpEIf2+esVRv0FqsgPrJ6qEnidMxl6EdjxXc4+O74pM8pV+XCeISNOYnDY0xAm1xE6iVWvk1I5we94lG8jjJPhe1AoiwnoqDyRWSMg1aA5qkeZSWvu4KRilynd6prLX9EcwgRt5e4UexX8IUxhkB0PNAqzIVC10ES20xRm5QNUmcyTbJLsU/moCEVAkWpSvVfXdrmPSlJURtVuz9kHjUl2Yj/X0ifuhjA1fYYwYnqNwhy9zzPV4AwSthSGZIsMnjNpZ9NUxigoq12UmCuH2+iwkfaklt6sDKtrjspwevZU/d/qzqnlvnaf7Sc6fqPzjAr8/X0vR5guUPSCrFKr7qkqZSMpUNV1ZM8+SylJnSkOqlJRApMnvVyXP3FHi44WQyeY9IxzfQhzjBC13VQ9MnINYa7IjMLkknBoq6N3SY6aRGYyyvZozI6fWM0cp7yoHqRbRqmbVONAJSlSE3pJm5XJ8NWAulCqvY5voHsrYjq1eQiz/dbfEObKGqrNQ5gnEYakPlIdJzid8uMonXNOROXx/np3n2ppzvZZlURSZIonKUwWr/BbA2qgukDSZtX5V0siPU+dV+e6s7dfQxgKKJnBjhqp2Xi2Uq0GlEhI2EbP0zPPxISUuvxeUkcqs2dIjYYwj8idcTBICTGEIYQWrlNACXyamsaPOkdSI3XOrPM8RWHofKE6NyAzRpJPgKhKpyhlFDCa3ynX1SsWx9Q6ayKSD2EcNOHrq+ZQX7dTkkQeZQgTfFmezByB5mSzGmw6VVXHySSfyEHqrXpB8qffWpKiRZPUrQZ/tZ7T+tTx1XGy0koepDN+NBepWlqSqy/jEwvJD6xep2ylbCfwyQ91xu8ElJS0s85u7AizUw/uyDh2VEWR8krhKLMo4J3r3TVXCdMlWWWkL/PRGdsQ5hqVyhs8UymdsYYwQnCoDHWzFTMn+IccZ3ixP0MYJ1DRvU55Uc8XInCppHT3UR2SZXsjeSej3CHxapdEc1KSnPp5GMfDEPi0UTJrRKQhzBGhNDHP/MTdEGZDIDOoahLQ2UyEc5ZANCcpzH+MAnOjEdy+/AAAAABJRU5ErkJggg==" style="display: block;"></div>
+										<!---->
+									</div>
+								</div>
+								<div class="qrcode-footer">
+									<p class="status-txt">别扫二维码登录</p>
+									<!---->
+									<!---->
+									<p class="app-link">请使用 小说客户端
+										<br>右边登录<br>或扫码下载APP</p>
+									<!---->
+								</div>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="login-right">
+							<div class="form-login">
+								<div id="geetest-wrap" class="input-box">
+									<ul id="z_login_denglu_1">
+										<li class="item username status-box">
+											<input type="text" value="" placeholder="你的账号" id="login-username"> <span class="status"></span>
+											<div class="text clearfix">
+												<p class="tips"></p>
+											</div>
+											<!---->
+										</li>
+										<li class="item password status-box">
+											<input type="password" placeholder="密码" id="login-passwd"> <span class="status"></span>
+											<div class="text clearfix">
+												<p class="tips"></p>
+											</div>
+										</li>
+										<!---->
+										<li class="item gc clearfix">
+											<!---->
+										</li>
+										<!---->
+									</ul>
+									<ul id="z_login_zhuce_1">
+										<li class="item" id="z_zhuce_user">
+										</li>
+										<li class="item">
+											<input type="file" id="z_login-files"> <span class="status"></span>
+											<div class="text clearfix">
+												<p class="tips"></p>
+											</div>
+											<!---->
+										</li>
+										<li class="item">
+											<input type="text" id="login-name" placeholder="你的昵称"> <span class="status"></span>
+											<div class="text clearfix">
+												<p class="tips"></p>
+											</div>
+											<!---->
+										</li>
+										<li class="item">
+											<input type="text" value="" placeholder="你的账号" id="login-username"> <span class="status"></span>
+											<div class="text clearfix">
+												<p class="tips"></p>
+											</div>
+											<!---->
+										</li>
+										<li class="item password status-box">
+											<input type="password" placeholder="密码" id="login-passwd"> <span class="status"></span>
+											<div class="text clearfix">
+												<p class="tips"></p>
+											</div>
+										</li>
+										<!---->
+										<li class="item gc clearfix">
+											<!---->
+										</li>
+										<!---->
+									</ul>
+								</div>
+								<div class="btn-box">
+									<a class="btns btn-login z_active" id="z_login_denglu">登录</a>
+									<a class="btns btn-reg" id="z_login_zhuce">注册</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="z_footer">
+				<p>阅文集团旗下网站：起点中文网 起点女生网 创世中文网 云起书院 红袖添香小说阅读网</p>
+				<p> 关于起点 联系我们 加入我们 帮助中心 提交建议 举报中心 </p>
+				<p>Copyright © 2002-2019 www.qidian.com All Rights Reserved版权所有 上海玄霆娱乐信息科技有限公司</p>
+				<p>联系方式 总机 021-61870500 地址：中国（上海）精神病院试验区碧波路690号6号楼101、201室</p>
+			</div>
+		</div>
+	</body>
+	<script>
+		
+		var href = 'http://localhost:8000'
+		
+		$('.btn-box a').on('click',function(){
+			if($(this).hasClass('z_active')){
+				
+//				$.ajax({
+//					
+//				})
+				
+			}else{
+				$('#geetest-wrap ul').eq($(this).index()).css('display','block')
+				$('#geetest-wrap ul').eq($(this).index()).siblings().css('display','none')
+				$(this).addClass('z_active');
+				$(this).siblings().removeClass('z_active');
+			}
+		})
+//		z_login-files.onchange = function() {
+//			var f = z_files.files[0]
+//			var d = new FormData
+//			d.append('img', f)
+//			$.ajax({
+//				type: "post",
+//				url: href + "/files/img",
+//				data: d,
+//				contentType: false,
+//				processData: false,
+//				success(data) {
+//					img_url = href + data
+//					z_zhuce_user.innerHTML = `
+//					<img src="${href}${data}" width="200px" height="200px"/>
+//					`
+//				}
+//			});
+//		}
+	</script>
+</html>

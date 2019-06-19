@@ -1,0 +1,215 @@
+*{
+	padding: 0;
+	margin: 0;
+	user-select: none;
+}
+img {
+    border: 0;
+}
+a, img {
+    border: none;
+}
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style: none;
+}
+#z_register{
+	height: auto;
+}
+#z_header_login{
+	height: 120px;
+	border: 3px solid #000;
+	background: url(../images/logo.png) no-repeat;
+	background-size: 20%;
+	background-position: 30px 20px;
+	background-color: #ccc;
+}
+#z_header_login>div{
+	height: 120px;
+}
+#z_login_btn{
+	width: 120px;
+	height: 60px;
+	font-weight: bold;
+	border: none;
+	margin-top: 28px;
+	margin-right: 80px;
+	float: right;
+}
+#z_footer{
+	padding-top: 50px;
+	height: 250px;
+	background-color: #000;
+	text-align: center;
+	font-size: 12px;
+}
+#z_footer>p{
+	width: 80%;
+	margin: 0 auto;
+	height: 50px;
+	color: #fff;
+}
+#z_login_register{
+	min-height: 600px;
+}
+.top-banner {
+    height: 86px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title-line {
+    width: 980px;
+    height: 28px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 28px;
+    text-align: center;
+}
+.title-line .tit {
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 40px;
+    background: #fff;
+    text-align: center;
+}
+.login-box {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+}
+.login-box .login-left {
+    float: left;
+    width: 489px;
+}
+.qrcode-login {
+    position: relative;
+    width: 480px;
+}
+.qrcode-login .qrcode-con {
+    padding-top: 72px;
+}
+.qrcode-login .qrcode-con .qrcode-box {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    background: #ddd;
+    position: relative;
+}
+.qrcode-login .qrcode-con .qrcode-box .qrcode-tips {
+    z-index: 10;
+    position: absolute;
+    width: 480px;
+    height: 192px;
+    top: -50px;
+    left: 50%;
+    margin-left: -240px;
+    background: url(//s1.hdslb.com/bfs/static/passport/static/img/qr-tip.a64967e.png) no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.login-box .line {
+    float: left;
+    border-right: 1px solid #ddd;
+    height: 300px;
+    margin-top: 28px;
+}
+.login-box .login-right {
+    float: left;
+    padding-left: 45px;
+    width: 490px;
+    box-sizing: border-box;
+}
+.form-login {
+    position: relative;
+}
+.form-login .input-box {
+    width: 414px;
+}
+.status-box {
+    position: relative;
+}
+.form-login .input-box .item input {
+    width: 388px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #aaa;
+    font-size: 14px;
+    padding: 20px;
+    height: 18px;
+    border-radius: 4px;
+}
+.form-login .input-box .text {
+    margin: 6px 0;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+}
+.qrcode-login .qrcode-footer {
+    width: 480px;
+    height: 155px;
+    background: url(//s1.hdslb.com/bfs/static/passport/static/img/2233login.af9c53d.png) 0 -7px no-repeat;
+}
+.qrcode-login .qrcode-footer .status-txt {
+    padding-top: 20px;
+    text-align: center;
+    color: #222;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+.qrcode-login .qrcode-footer .app-link, .qrcode-login .qrcode-footer .suc-txt {
+    text-align: center;
+    color: #717171;
+    font-size: 14px;
+}
+.top-banner>img{
+	width: 100%;
+	height: 100%;
+}
+/*.form-login .input-box .btn-box .btn-login {
+    background-color: #00a7de;
+}*/
+.btns {
+    color: #555;
+    display: inline-block;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 184px;
+    line-height: 36px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+#z_register .z_active{
+	background-color: #00a7de;
+}
+#z_login-files{
+	border: none;
+	line-height: 0;
+}
+#z_zhuce_user{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #ccc;
+	margin-left: 140px;
+}
+#z_zhuce_user>img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+#z_login_zhuce_1{
+	display: none;
+}
+#z_login_denglu_1{
+	display: block;
+	margin-top: 80px;
+}
